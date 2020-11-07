@@ -9,5 +9,8 @@
     ./sh.nix
   ];
 
-  environment.systemPackages = [ pkgs.alacritty pkgs.elixir ];
+  nixpkgs.config.allowUnfree = true;
+  environment.systemPackages = [ pkgs.firefox pkgs.slack-dark pkgs.zoom-us pkgs.alacritty pkgs.elixir pkgs.spotify pkgs.docker pkgs.docker-compose pkgs.ripgrep ];
+
+  time.timeZone = "America/New_York";
 }
